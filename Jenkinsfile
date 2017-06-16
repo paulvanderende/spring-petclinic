@@ -3,7 +3,7 @@ stage('Build') {
     node('swarm') {
         checkout scm
         try {
-            sh "./mvnw clean build package"
+            sh "./mvnw package"
         } catch (e) {
             throw e
         } finally {
